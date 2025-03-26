@@ -16,3 +16,9 @@ Now the todo_item object is stored in '_todos[]' list,
 It displays the items as list by wrapping the item w/Expanded widget. 
 It also shows the item order as ascending or descending according to priority. 
 The list order could be changed using an ElevatedButton places on top , which calls in for a function to change the order of list.
+
+### 6 Why Keys are useful? 
+- The keys plays a vital role in tracking down the widget.
+- For Example, 3 todo items are listed here, when sorted , their position might change too. But flutter keeps the track of widgets, & doesn't recreate widgets' element, It instead reuses the element & displays the widget.
+- But, when using the `CheckableTodoItem()` widget, & marking a widget and sorting on the go, it changes the serial and points another widget according to the position.
+- So, ultimately keys are useful to track down widget, so that updates could be tracked too.
