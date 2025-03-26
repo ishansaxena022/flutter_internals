@@ -22,3 +22,9 @@ The list order could be changed using an ElevatedButton places on top , which ca
 - For Example, 3 todo items are listed here, when sorted , their position might change too. But flutter keeps the track of widgets, & doesn't recreate widgets' element, It instead reuses the element & displays the widget.
 - But, when using the `CheckableTodoItem()` widget, & marking a widget and sorting on the go, it changes the serial and points another widget according to the position.
 - So, ultimately keys are useful to track down widget, so that updates could be tracked too.
+
+### 7 Using Keys to wigets and elements.
+- By marking widgets with keys, flutter searches for both Element type & Widget type to compare, and also compares with keys.
+- If the key found isn't aligned with the Widget's key, then it updates the element and so the State is also updated for the same element pointing to the widget.
+- Adding Key using **Approach 1** as: `key: ValueKey(todo.text)`. It accepts any type of value, but it must be unique and connected to data.  ***(Recommeded approach)***
+- Adding Key using **Approach 2** as: `key: ObjectKey(todo)`. It accepts object as a value.
